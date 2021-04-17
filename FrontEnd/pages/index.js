@@ -3,7 +3,8 @@ import styles from '../styles/Home.module.css'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Autocomplete from '../components/Autocomplete'
-
+import Nav from '../components/nav'
+import Footer from '../components/footer'
 const URL = `https://api.thecatapi.com/v1/breeds`
 const imgURL = `https://api.thecatapi.com/v1/images`
 
@@ -19,7 +20,7 @@ export default function Home() {
   const [origin, setOrigin] = useState('')
   const [description, setDescription] = useState('')
   const [life_span, setLife_span] = useState('')
-  
+
 
 
   useEffect(() => {
@@ -34,7 +35,7 @@ export default function Home() {
   const getCats = async () => {
     let cat = await axios.get(URL)
     setCats(cat.data)
-   
+
   }
 
   const search = async (name) => {
@@ -70,11 +71,11 @@ export default function Home() {
     )))
   }
 
-  const scandName =  () => {
+  const scandName = () => {
 
     dataAllName = (cats.map((item) => item.name))
 
-   
+
     // return (
     //   cats.map((item,index) => (<li>
     //     {item.name}
@@ -83,8 +84,10 @@ export default function Home() {
   }
 
   return (
-    <div className={styles.container}>
-      Hello
+
+
+    <div className="fiexd">
+      <Nav />
       {/* img: <img src={image.url} width="300" height="300" /> */}
       {/* {printCats()} */}
 
@@ -105,13 +108,23 @@ export default function Home() {
         <button onClick={() => search(find)}>Find!</button>
       </div> */}
 
-      <div>
-    
-       {scandName()}
+      <div className='relative overscroll-auto'> 
+
+        {scandName()}
         <Autocomplete
-          suggestions={dataAllName} 
+          suggestions={dataAllName}
         />
+
+      </div >
+      <div className='fixed'>
+        <div className='w-screen absolute buttom-0 fixed mt-24'>
+          <Footer />
+        </div>
       </div>
+
+
     </div>
+
+
   )
 }

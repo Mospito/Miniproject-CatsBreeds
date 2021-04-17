@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from 'axios'
 
 const URL = `https://api.thecatapi.com/v1/breeds`
@@ -35,7 +35,7 @@ const Autocomplete = (props) => {
 
   }
 
-  const search = async (name) => {
+  const search =  (name) => {
 
     cats.map((item, index) => {
       if (name === item.name) {
@@ -102,7 +102,7 @@ const Autocomplete = (props) => {
                 className = "active";
               }
               return (
-                <li className={className} key={suggestion} onClick={onClick}>
+                <li className={className} key={suggestion} onClick={onClick} className='border-b-2 list-disc border-dashed border-black '>
                   {suggestion}
                 </li>
               );
@@ -122,29 +122,54 @@ const Autocomplete = (props) => {
 
   return (
     <>
-      <img src={image.url} width="300" height="300" />
-      <br></br>
-        name: {nameCat}
-      <br></br>
-        temperament: {temperament}
-      <br></br>
-        origin: {origin}
-      <br></br>
-        description: {description}
-      <br></br>
-        life span: {life_span}
-      <br></br>
-       Find:
-      <input
-        type="text"
-        onChange={onChange}
-        onKeyDown={onKeyDown}
-        value={input}
-      />
 
-      <button value={input} onClick={() => search(input)}>Find!</button>
+      <div className='flex flex-col justify-center items-center '>
 
-      {renderAutocomplete()}
+        <div className=' w-4/12 flex justify-around items-center mt-10'>
+          <a className='font-bold text-2xl '>Search :  </a>
+          <input
+            type="text"
+            onChange={onChange}
+            onKeyDown={onKeyDown}
+            value={input}
+            className='border-2 border-green-600 rounded pl-2 w-80'
+            placeholder=" Cat Breeds"
+          />
+
+          <button value={input} onClick={() => search(input)} className=' p-1 w-20 rounded transition duration-500 ease-in-out bg-green-500 hover:bg-green-200 transform hover:-translate-y-1 hover:scale-110'>Find!</button>
+        </div>
+
+
+        <duv className=" ">
+          {renderAutocomplete()}
+        </duv>
+
+      </div>
+
+      <div className='flex justify-center  items-center  '>
+        <img src={image.url} className='rounded-2xl shadow-2xl m-5 max-w-4xl h-80 ' />
+        <div className='flex w-2/4 mt-5 p-4 ml-5 items-center justify-start border-8 border-green-600 border-double'>
+          <br />
+          <div>
+            <a className='text-lg font-semibold'>name: </a>{nameCat}
+            <br />
+            <a className='text-lg font-semibold'>temperament: </a>{temperament}
+            <br />
+            <a className='text-lg font-semibold'>origin: </a>{origin}
+            <br />
+            <a className='text-lg font-semibold '>description: </a>{description}
+            <br />
+            <a className='text-lg font-semibold'>life span: </a>{life_span} years
+            <br />
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
 
     </>
   );
