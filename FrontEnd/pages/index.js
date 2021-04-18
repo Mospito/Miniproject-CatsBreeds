@@ -87,7 +87,7 @@ export default function Home() {
 
 
     <div className="fiexd">
-      <Nav />
+     
       {/* img: <img src={image.url} width="300" height="300" /> */}
       {/* {printCats()} */}
 

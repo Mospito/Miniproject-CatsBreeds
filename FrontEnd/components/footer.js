@@ -1,13 +1,7 @@
 
 const Footer = () => {
 
-
-
-
     return (
-
-  
-
 
             <div>
 

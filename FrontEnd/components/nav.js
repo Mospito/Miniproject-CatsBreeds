@@ -1,4 +1,4 @@
-
+import Link from 'next/link'
 const Nav = () => {
 
 
@@ -18,7 +18,7 @@ const Nav = () => {
                     <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
                         <nav>
                             <ul class="md:flex items-center justify-between text-base text-green-800 pt-4 md:pt-0">
-                                <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="#">Home</a></li>
+                              <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2 " href="/" >Home</a></li>
                                 <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="#">Cat-symptom</a></li>
                                 <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="#">About</a></li>
                             </ul>
