@@ -140,7 +140,7 @@ const Autocomplete = (props) => {
         </div>
 
 
-        <duv className=" ">
+        <duv className="h-44 overflow-auto">
           {renderAutocomplete()}
         </duv>
 
@@ -159,8 +159,8 @@ const Autocomplete = (props) => {
             <br />
             <a className='text-lg font-semibold '>description: </a>{description}
             <br />
-            <a className='text-lg font-semibold'>life span: </a>{life_span} years <br />
-           
+            <a className='text-lg font-semibold'>life span: </a>{life_span} years<br />
+            
           </div>
 
         </div>

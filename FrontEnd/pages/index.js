@@ -86,7 +86,7 @@ export default function Home() {
   return (
 
 
-    <div className="fiexd">
+    <div className="flex flex-col h-screen justify-between ">
      
       {/* img: <img src={image.url} width="300" height="300" /> */}
       {/* {printCats()} */}
@@ -108,7 +108,7 @@ export default function Home() {
         <button onClick={() => search(find)}>Find!</button>
       </div> */}
 
-      <div className='relative overscroll-auto'> 
+      <div className=''> 
 
         {scandName()}
         <Autocomplete
@@ -116,11 +116,10 @@ export default function Home() {
         />
 
       </div >
-      <div className='fixed'>
-        <div className='w-screen absolute buttom-0 fixed mt-24'>
-          <Footer />
+      <div className='w-screen'>
+          <Footer/>
         </div>
-      </div>
+      
 
 
     </div>
