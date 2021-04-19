@@ -86,7 +86,7 @@ export default function Home() {
   return (
 
 
-    <div className="flex flex-col h-screen justify-between ">
+    <div className="flex flex-col justify-between fixed">
      
       {/* img: <img src={image.url} width="300" height="300" /> */}
       {/* {printCats()} */}
@@ -116,7 +116,8 @@ export default function Home() {
         />
 
       </div >
-      <div className='w-screen'>
+
+      <div className='w-screen -mt-3'>
           <Footer/>
         </div>
       

@@ -125,8 +125,8 @@ const Autocomplete = (props) => {
 
       <div className='flex flex-col justify-center items-center '>
 
-        <div className=' w-4/12 flex justify-around items-center mt-10'>
-          <a className='font-bold text-2xl '>Search :  </a>
+        <div className=' w-5/12 flex justify-around items-center mt-10  border-green-900 bg-green-300 p-2 rounded-lg'>
+          <a className='font-bold text-2xl'>Search :  </a>
           <input
             type="text"
             onChange={onChange}
@@ -136,7 +136,7 @@ const Autocomplete = (props) => {
             placeholder=" Cat Breeds"
           />
 
-          <button value={input} onClick={() => search(input)} className=' p-1 w-20 rounded transition duration-500 ease-in-out bg-green-500 hover:bg-green-200 transform hover:-translate-y-1 hover:scale-110'>Find!</button>
+          <button value={input} onClick={() => search(input)} className=' p-1 ml-2 w-20 rounded transition duration-500 ease-in-out bg-green-500 hover:bg-green-200 transform hover:-translate-y-1 hover:scale-110'>Find!</button>
         </div>
 
 
@@ -146,9 +146,9 @@ const Autocomplete = (props) => {
 
       </div>
 
-      <div className='flex justify-center  items-center  '>
-        <img src={image.url} className='rounded-2xl shadow-2xl m-5 max-w-4xl h-80 ' />
-        <div className='flex w-2/4 mt-5 p-4 ml-5 items-center justify-start border-8 border-green-600 border-double'>
+      <div className='flex justify-center items-center'>
+        <img src={image.url} className='rounded-2xl shadow-2xl m-5 max-w-md h-64'/>
+        <div className='flex w-3/5 h-64 p-4 ml-5 items-center justify-start  border-8 border-green-600 border-double'>
           <br />
           <div>
             <a className='text-lg font-semibold'>name: </a>{nameCat}
@@ -159,8 +159,8 @@ const Autocomplete = (props) => {
             <br />
             <a className='text-lg font-semibold '>description: </a>{description}
             <br />
-            <a className='text-lg font-semibold'>life span: </a>{life_span} years<br />
-            
+            <a className='text-lg font-semibold'>life span: </a>{life_span} years  <br />
+           
           </div>
 
         </div>
