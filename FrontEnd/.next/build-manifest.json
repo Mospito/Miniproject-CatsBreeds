@@ -29,10 +29,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/symptom": [
+    "/adminSymptom": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/symptom.js"
+      "static/chunks/pages/adminSymptom.js"
     ]
   },
   "ampFirstPages": []
