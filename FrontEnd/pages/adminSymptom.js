@@ -93,6 +93,7 @@ const adminSymptom = () => {
 
     return (
         <div className="flex h-screen w-screen flex-col items-center">
+            <title>AdminSymptom</title>
             <a className="border-2 border-green-900 bg-green-300 font-bold text-3xl p-2 rounded-lg mt-5">รายการโรคของแมวในระบบ</a>
             <div className="flex flex-wrap justify-evenly  w-full h-3/5 overflow-auto mt-5 ">
                 {printSymtom(data.disease)}

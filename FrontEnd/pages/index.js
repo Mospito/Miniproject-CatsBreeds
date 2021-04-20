@@ -87,6 +87,7 @@ export default function Home() {
 
 
     <div className="flex flex-col justify-between fixed">
+      <title>Home</title>
      
       {/* img: <img src={image.url} width="300" height="300" /> */}
       {/* {printCats()} */}

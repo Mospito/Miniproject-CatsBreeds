@@ -134,6 +134,7 @@ const symptom = () => {
     return (
 
         <div className="flex flex-col h-screen w-screen justify-start items-center  fixed mt-5">
+            <title>Cat-Symptom</title>
             
             
             {/* <div className='flex flex-col h-screen justify-between items-center'> */}
