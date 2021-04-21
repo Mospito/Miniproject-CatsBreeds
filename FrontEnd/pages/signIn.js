@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import Footer from '../components/footer'
 
 const URL = `http://localhost/api/login`
 const SignIn = ({ token }) => {
@@ -45,7 +46,7 @@ const SignIn = ({ token }) => {
                 <input type="password"
                     name="password"
                     placeholder="password"
-                    onChange={(e) => setPassword(e.target.value)} 
+                    onChange={(e) => setPassword(e.target.value)}
                     className='border-2 border-red-600'
                 />
             </div>
@@ -62,10 +63,10 @@ const SignIn = ({ token }) => {
             <title>Login</title>
 
             <div >
-              
+
                 <h1>Login</h1>
                 <div><b>Token:</b> {token.substring(0, 15)}...
-                <button onClick={copyText}> Copy token </button>
+                    <button onClick={copyText}> Copy token </button>
                 </div>
                 <br />
                 <div>
@@ -89,7 +90,9 @@ const SignIn = ({ token }) => {
                     <button onClick={login} className='border-2 border-red-600'>Login</button>
                 </div>
             </div>
+           
         </div>
+        
     )
 
 

@@ -102,42 +102,47 @@ const adminSymptom = ({ token }) => {
 
 
             <div className="flex items-center  border-4 border-green-800 border-dashed bg-green-200 rounded-xl w-1/2 h-2/4 font-bold">
+          
                 <div className="flex flex-col  w-full h-full  mt-5">
                     <div className="flex justify-center ">
                         <a className="border-2 border-green-900 bg-green-300 font-bold text-3xl p-2 rounded-lg">เพิ่มโรคเข้าสู่ระบบ</a>
                         <br />
                     </div>
-                    <span className="m-2">
-                        <a>ชื่อโรค : </a>
-                        <input type="text" className="border-2 border-black rounded-md shadow-md ml-5" onChange={(e) => setName(e.target.value)} />
-                    </span>
-                    <span className="m-2">
-                        <a>อาการที่ 1 : </a>
-                        <input type="text" className="border-2 border-black rounded-md shadow-md" onChange={(e) => setSymtom1(e.target.value)} />
-                    </span>
-                    <span className="m-2">
-                        <a>อาการที่ 2 : </a>
-                        <input type="text" className="border-2 border-black rounded-md shadow-md" onChange={(e) => setSymtom2(e.target.value)} />
-                    </span>
-                    <span className="m-2">
-                        <a>อาการที่ 3 : </a>
-                        <input type="text" className="border-2 border-black rounded-md shadow-md" onChange={(e) => setSymtom3(e.target.value)} />
-                    </span>
-                    <span className="m-2">
-                        <a>อาการที่ 4 : </a>
-                        <input type="text" className="border-2 border-black rounded-md shadow-md" onChange={(e) => setSymtom4(e.target.value)} />
-                    </span>
-                    <div className="flex justify-center">
-                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full w-28"
-                            onClick={() =>
-                                addSymptom(name, symptom1, symptom2, symptom3, symptom4)
-                            }>
-                            ตกลง!
+                    
+                        <span className="m-2">
+                            <a>ชื่อโรค : </a>
+                            <input type="text" className="border-2 border-black rounded-md shadow-md ml-5" onChange={(e) => setName(e.target.value)} />
+                        </span>
+                        <span className="m-2">
+                            <a>อาการที่ 1 : </a>
+                            <input type="text" className="border-2 border-black rounded-md shadow-md" onChange={(e) => setSymtom1(e.target.value)} />
+                        </span>
+                        <span className="m-2">
+                            <a>อาการที่ 2 : </a>
+                            <input type="text" className="border-2 border-black rounded-md shadow-md" onChange={(e) => setSymtom2(e.target.value)} />
+                        </span>
+                        <span className="m-2">
+                            <a>อาการที่ 3 : </a>
+                            <input type="text" className="border-2 border-black rounded-md shadow-md" onChange={(e) => setSymtom3(e.target.value)} />
+                        </span>
+                        <span className="m-2">
+                            <a>อาการที่ 4 : </a>
+                            <input type="text" className="border-2 border-black rounded-md shadow-md" onChange={(e) => setSymtom4(e.target.value)} />
+                        </span>
+                        <div className="flex justify-center">
+                            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full w-28"
+                                onClick={() =>
+                                    addSymptom(name, symptom1, symptom2, symptom3, symptom4)
+                                }>
+                                ตกลง!
                         </button>
-                    </div>
+                        </div>
+                 
 
                 </div>
+                
             </div>
+           
             <div className='w-screen -mt-8'>
                 <Footer />
             </div>

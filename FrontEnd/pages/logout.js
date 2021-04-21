@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import Footer from '../components/footer'
 
 const URL = `http://localhost/api/logout`
 
@@ -31,6 +32,9 @@ const logout = ({ token }) => {
                 <div>
                     <h2> {status}  </h2>
                 </div>
+                <div className='w-screen -mt-8'>
+                <Footer />
+            </div>
             
         </div>
     )

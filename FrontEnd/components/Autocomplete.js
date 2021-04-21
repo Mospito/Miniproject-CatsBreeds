@@ -26,18 +26,22 @@ const Autocomplete = (props) => {
   }, []);
 
   const getImage = async (id) => {
-    let imp = await axios.get(`${imgURL}/${id}`)
-    setImage(imp.data)
+    if (id) {
+      let imp = await axios.get(`${imgURL}/${id}`)
+      setImage(imp.data)
+      console.log(imp);
+    }
+
   }
 
   const getCats = async () => {
     let cat = await axios.get(URL)
     setCats(cat.data)
-    
+
 
   }
 
-  const search =  (name) => {
+  const search = (name) => {
 
     cats.map((item, index) => {
       if (name === item.name) {
@@ -47,12 +51,14 @@ const Autocomplete = (props) => {
         setOrigin(item.origin)
         setDescription(item.description)
         setLife_span(item.life_span)
-        {getImage(refimg)}
+        setImage(item.image.url)
+        // console.log('image', item.image)
+        // { getImage(refimg) }
 
       }
 
     })
-    
+
 
   }
 
@@ -127,7 +133,7 @@ const Autocomplete = (props) => {
     <>
 
       <div className='flex flex-col justify-center items-center '>
-        
+
 
         <div className=' w-5/12 flex justify-around items-center mt-10  border-green-900 bg-green-300 p-2 rounded-lg'>
           <a className='font-bold text-2xl'>Search :  </a>
@@ -145,16 +151,16 @@ const Autocomplete = (props) => {
 
 
         <duv className="h-44 overflow-auto">
-          
-          
+
+
           {renderAutocomplete()}
         </duv>
 
       </div>
 
       <div className='flex justify-center items-center'>
-       
-        <img src={image.url} className='rounded-2xl shadow-2xl m-5 max-w-md h-64'/>
+
+        <img src={image} className='rounded-2xl shadow-2xl m-5 max-w-md h-64' />
         {/* <img src={URLloading}/> */}
         <div className='flex w-3/5 h-64 p-4 ml-5 items-center justify-start  border-8 border-green-600 border-double'>
           <br />
@@ -167,8 +173,8 @@ const Autocomplete = (props) => {
             <br />
             <a className='text-lg font-semibold '>description: </a>{description}
             <br />
-            <a className='text-lg font-semibold'>life span: </a>{life_span} years 
-            <br />
+            <a className='text-lg font-semibold'>life span: </a>{life_span} years  <br />
+
           </div>
 
         </div>
