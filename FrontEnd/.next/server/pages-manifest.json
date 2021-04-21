@@ -2,7 +2,6 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/symptom": "pages/symptom.js",
-  "/adminSymptom": "pages/adminSymptom.js",
-  "/signIn": "pages/signIn.js"
+  "/": "pages/index.js",
+  "/logout": "pages/logout.js"
 }

@@ -52,16 +52,16 @@ const symptom = () => {
 
         return (healths.disease.map((item, index) =>
         (
-            <div className=" w-1/2 h-full" key={index}>
-                <input type="checkbox" onChange={(e) => setCheck1(e.target.value)} value={item.symptom1} /> {item.symptom1}
-                <br />
-                <input type="checkbox" onChange={(e) => setCheck2(e.target.value)} value={item.symptom2} /> {item.symptom2}
-                <br />
-                <input type="checkbox" onChange={(e) => setCheck3(e.target.value)} value={item.symptom3} /> {item.symptom3}
-                <br />
-                <input type="checkbox" onChange={(e) => setCheck4(e.target.value)} value={item.symptom4} /> {item.symptom4}
-                <br />
-
+            <div className='flex flex-col justify-center items-start w-1/2 h-1/3' key={index}>
+                <div>
+                    <input className = 'w-4 h-4' type="checkbox" onChange={(e) => setCheck1(e.target.value)} value={item.symptom1} /> {item.symptom1}
+                    <br />
+                    <input className = 'w-4 h-4' type="checkbox" onChange={(e) => setCheck2(e.target.value)} value={item.symptom2} /> {item.symptom2}
+                    <br />
+                    <input className = 'w-4 h-4'type="checkbox" onChange={(e) => setCheck3(e.target.value)} value={item.symptom3} /> {item.symptom3}
+                    <br />
+                    <input className = 'w-4 h-4' type="checkbox" onChange={(e) => setCheck4(e.target.value)} value={item.symptom4} /> {item.symptom4}
+                </div>
             </div>
         )
 
@@ -78,8 +78,8 @@ const symptom = () => {
                 setName(item.name)
             }
             else {
-                
-                
+
+
             }
         })
 
@@ -115,9 +115,10 @@ const symptom = () => {
             <a className='text-lg text-green-800 font-bold mt-5'>แมวของท่านมีอาการดังนี้หรือไม่ โปรดติ๊กเลือกตามอาการข้างต้น</a>
             <div className="flex flex-col items-center w-2/4 h-2/4 overflow-auto mt-5 border-4 border-green-800 border-dashed bg-green-200 rounded-xl">
                 {PrintCheckBoxData()}
-
-                <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full w-28 ' onClick={() => { { FindDisease(check1, check2, check3, check4) } }}>Find</button>
-
+                <div className = 'flex w-full h-full justify-center items-end mb-4'>
+                     <button className='bg-green-900 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full w-28 focus:outline-none' onClick={() => { { FindDisease(check1, check2, check3, check4) } }}>Find</button>
+                </div>
+               
             </div>
             <span className="text-xl mt-5 border-4 border-green-700 p-2 rounded-md"><a className='font-bold ' >แมวของคุณอาจเป็นโรค :</a>{name}</span>
             <div className='w-screen -mt-8'>

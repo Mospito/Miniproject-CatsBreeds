@@ -18,25 +18,24 @@ const logout = ({ token }) => {
         setStatus("Logout successful")
     }
 
-
-
-
-
     return (
 
-
-        <div>
+        <div className='flex fixed flex-col justify-start items-center h-screen w-screen'>
             <title>LogOut</title>
-            Hello Logout
-            <h1>Logout</h1>
-                <div>
-                    <h2> {status}  </h2>
+            <div  className = 'flex justify-center items-center w-1/2 h-3/4'>
+                <div className='flex flex-col justify-center items-center font-bold text-green-800 mt-12 animate-bounce'>
+                    <h1 className='text-6xl uppercase tracking-wider'>Logout</h1>
+                    <h2 className='text-4xl tracking-wider mt-8'> {status}  </h2>
                 </div>
-                <div className='w-screen -mt-8'>
+            </div>
+
+
+            <div className='w-screen'>
                 <Footer />
             </div>
-            
+
         </div>
+
     )
 }
 

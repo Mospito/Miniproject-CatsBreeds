@@ -27,27 +27,27 @@ const SignIn = ({ token }) => {
     }
 
     const loginForm = () => (
-        <div >
+        <div className='flex flex-col w-4/5 -mt-2'>
             <div>
                 Username:
             </div>
             <div>
-                <input type="text"
+                <input className='w-full h-8 rounded-md border-2 border-green-800 ring-2 ring-green-500 mt-2 pl-2 focus:outline-none' 
+                    type="text"
                     name="username"
                     placeholder="username"
                     onChange={(e) => setUsername(e.target.value)}
-                    className='border-2 border-red-600'
                 />
             </div>
-            <div>
+            <div className='mt-4'>
                 Password:
             </div>
             <div>
-                <input type="password"
+                <input className='w-full h-8 rounded-md border-2 border-green-800 ring-2 ring-green-500 mt-2 pl-2 focus:outline-none' 
+                    type="password"
                     name="password"
                     placeholder="password"
                     onChange={(e) => setPassword(e.target.value)}
-                    className='border-2 border-red-600'
                 />
             </div>
         </div>
@@ -59,38 +59,45 @@ const SignIn = ({ token }) => {
 
     return (
 
-        <div className="flex fixed justify-center items-center border-2 border-red-600 h-screen w-screen">
+        <div className="flex fixed flex-col justify-center items-center h-screen w-screen">
             <title>Login</title>
-
-            <div className='flex flex-col justify-center items-center border-2 border-black font-semibold h-3/5 w-96 -mt-8'>
-                <div className='flex flex-col items-center justify-start '>
-                    <h1>Login</h1>
-                    <div><b>Token:</b> {token.substring(0, 15)}...
-                        <button onClick={copyText}> Copy token </button>
+            <div className='flex flex-col justify-start items-center border-4 border-green-900 ring-4 ring-green-400 
+                bg-gradient-to-t from-green-300 to-green-100 font-semibold h-2/3 w-96 mt-19 rounded-xl shadow-xl'>
+                <div className='flex flex-col items-center justify-start mt-6'>
+                    <h1 className='text-3xl uppercase tracking-wider'>Sign in</h1>
+                    <div className='mt-4'>
+                        <button className='border-2 border-green-600 bg-green-400 hover:bg-green-200 rounded-md h-8 w-28 '
+                            onClick={copyText}> Copy token </button>
                     </div>
                 </div>
-
-                <br />
-                <div>
+                <div className='flex flex-col justify-start w-4/5 mt-4 text-red-800'>
                     Status:  {status}
-                    check: {ischeck}
                 </div>
+                <div className='flex flex-col justify-start w-4/5 mt-2 text-red-800'>
+                    Check: {ischeck}
+                </div>
+
+
+
                 <br />
                 {loginForm()}
 
-                <div>
-                    <input type="checkbox"
+                <div className='w-4/5'>
+                    <input className='h-4 w-4 mt-5' type="checkbox"
                         name="IsRememberMe"
                         onChange={(e) => setIscheck(e.target.value)}
-                        className='border-2 border-red-600'
-                    />Remember me!
+                    /> <a className='ml-2'>Remember me!</a>
                     <br /><br />
                 </div>
 
                 <div>
-
-                    <button onClick={login} className='border-2 border-red-600'>Login</button>
+                    <button className='h-10 w-28 border-4 border-green-900 rounded-lg bg-green-500 hover:bg-green-300 
+                        font-bold uppercase focus:outline-none' 
+                        onClick={login}>Sign in</button>
                 </div>
+            </div>
+            <div className='w-screen'>
+                <Footer />
             </div>
 
         </div>
