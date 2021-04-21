@@ -2,12 +2,13 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 import useSWR, { mutate } from 'swr'
 import Footer from '../components/footer'
+import withAuth from '../components/Auth'
 
 const URL = `http://localhost/api/disease`
 const fetcher = (url) => axios.get(url).then(res => res.data)
 
 
-const adminSymptom = () => {
+const adminSymptom = ({ token }) => {
 
     const [healths, setHealths] = useState({
         "disease": [
@@ -144,4 +145,9 @@ const adminSymptom = () => {
     )
 }
 
-export default adminSymptom
+export default withAuth(adminSymptom)
+
+
+export function getServerSideProps({ req, res }) {
+    return { props: { token: req.cookies.token || "" } };
+}

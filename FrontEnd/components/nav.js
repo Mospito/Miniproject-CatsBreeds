@@ -15,7 +15,11 @@ const Nav = () => {
                         </Link>
 
                         <Link href="/symptom">
-                            <a className="inline-block no-underline hover:text-black font-bold text-lg py-2 px-4 lg:-ml-2" >Cat-symptom</a>
+                            <a className="inline-block no-underline hover:text-black font-bold text-lg py-2 px-4 lg:-ml-2" >Cat-Symptom</a>
+                        </Link>
+
+                        <Link href="/adminSymptom">
+                            <a className="inline-block no-underline hover:text-black font-bold text-lg py-2 px-4 lg:-ml-2" >Add-Symptom</a>
                         </Link>
 
                         <Link href="#">
@@ -37,7 +41,7 @@ const Nav = () => {
                             <a className="bg-transparent text-gray-800  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700 font-bold">Sign up</a>
                         </Link>
 
-                        <Link href="#">
+                        <Link href="/logout">
                             <a className="bg-green-600 text-gray-200  p-2 rounded  hover:bg-green-500 hover:text-gray-100 font-bold">Log out</a>
                         </Link>
 

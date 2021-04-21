@@ -62,7 +62,10 @@ export default function Home() {
         weight: {item.weight.metric}
         <img src={item.image.url} alt="" /> */}
         {/* {(item.name === "Abyssinian")?<img src="https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg"/>:"null"} */}
-        Breed: {item.name}
+        Breed: {item.weight.metric}
+        <br />
+        {/* Test: {item.image.url} */}
+        
 
         <button onClick={() => getImage(item.reference_image_id)}>Get</button>
 
@@ -110,6 +113,8 @@ export default function Home() {
       </div> */}
 
       <div className=''> 
+
+
 
         {scandName()}
         <Autocomplete

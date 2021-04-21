@@ -29,16 +29,6 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/signIn": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/signIn.js"
-    ],
-    "/signUp": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/signUp.js"
-    ],
     "/symptom": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",

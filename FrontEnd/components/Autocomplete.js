@@ -3,6 +3,7 @@ import axios from 'axios'
 
 const URL = `https://api.thecatapi.com/v1/breeds`
 const imgURL = `https://api.thecatapi.com/v1/images`
+const URLloading = `https://www.kyorollen.com/kyomember/assets/img/loading.gif`
 
 const Autocomplete = (props) => {
   const [active, setActive] = useState(0);
@@ -32,6 +33,7 @@ const Autocomplete = (props) => {
   const getCats = async () => {
     let cat = await axios.get(URL)
     setCats(cat.data)
+    
 
   }
 
@@ -40,16 +42,17 @@ const Autocomplete = (props) => {
     cats.map((item, index) => {
       if (name === item.name) {
         setRefimg(item.reference_image_id)
-        getImage(refimg)
         setNameCat(item.name)
         setTemperament(item.temperament)
         setOrigin(item.origin)
         setDescription(item.description)
         setLife_span(item.life_span)
+        {getImage(refimg)}
 
       }
 
     })
+    
 
   }
 
@@ -124,6 +127,7 @@ const Autocomplete = (props) => {
     <>
 
       <div className='flex flex-col justify-center items-center '>
+        
 
         <div className=' w-5/12 flex justify-around items-center mt-10  border-green-900 bg-green-300 p-2 rounded-lg'>
           <a className='font-bold text-2xl'>Search :  </a>
@@ -141,13 +145,17 @@ const Autocomplete = (props) => {
 
 
         <duv className="h-44 overflow-auto">
+          
+          
           {renderAutocomplete()}
         </duv>
 
       </div>
 
       <div className='flex justify-center items-center'>
+       
         <img src={image.url} className='rounded-2xl shadow-2xl m-5 max-w-md h-64'/>
+        {/* <img src={URLloading}/> */}
         <div className='flex w-3/5 h-64 p-4 ml-5 items-center justify-start  border-8 border-green-600 border-double'>
           <br />
           <div>
