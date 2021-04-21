@@ -11,7 +11,7 @@ const Autocomplete = (props) => {
   const [isShow, setIsShow] = useState(false);
   const [input, setInput] = useState("");
   const [cats, setCats] = useState([]);
-  const [image, setImage] = useState({});
+  const [image, setImage] = useState('https://www.kyorollen.com/kyomember/assets/img/loading.gif');
   const [find, setFind] = useState("");
   const [refimg, setRefimg] = useState('')
   const [nameCat, setNameCat] = useState('')

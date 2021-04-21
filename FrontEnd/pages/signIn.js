@@ -59,15 +59,17 @@ const SignIn = ({ token }) => {
 
     return (
 
-        <div className="flex justify-center">
+        <div className="flex fixed justify-center items-center border-2 border-red-600 h-screen w-screen">
             <title>Login</title>
 
-            <div >
-
-                <h1>Login</h1>
-                <div><b>Token:</b> {token.substring(0, 15)}...
-                    <button onClick={copyText}> Copy token </button>
+            <div className='flex flex-col justify-center items-center border-2 border-black font-semibold h-3/5 w-96 -mt-8'>
+                <div className='flex flex-col items-center justify-start '>
+                    <h1>Login</h1>
+                    <div><b>Token:</b> {token.substring(0, 15)}...
+                        <button onClick={copyText}> Copy token </button>
+                    </div>
                 </div>
+
                 <br />
                 <div>
                     Status:  {status}
@@ -90,9 +92,9 @@ const SignIn = ({ token }) => {
                     <button onClick={login} className='border-2 border-red-600'>Login</button>
                 </div>
             </div>
-           
+
         </div>
-        
+
     )
 
 

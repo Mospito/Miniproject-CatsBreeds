@@ -116,7 +116,7 @@ const symptom = () => {
             <div className="flex flex-col items-center w-2/4 h-2/4 overflow-auto mt-5 border-4 border-green-800 border-dashed bg-green-200 rounded-xl">
                 {PrintCheckBoxData()}
 
-                <button className='border-2 border-red-600' onClick={() => { { FindDisease(check1, check2, check3, check4) } }}>Find</button>
+                <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full w-28 ' onClick={() => { { FindDisease(check1, check2, check3, check4) } }}>Find</button>
 
             </div>
             <span className="text-xl mt-5 border-4 border-green-700 p-2 rounded-md"><a className='font-bold ' >แมวของคุณอาจเป็นโรค :</a>{name}</span>
