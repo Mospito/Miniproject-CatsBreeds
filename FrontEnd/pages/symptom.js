@@ -52,15 +52,15 @@ const symptom = () => {
 
         return (healths.disease.map((item, index) =>
         (
-            <div className='flex flex-col justify-center items-start w-1/2 h-1/3' key={index}>
-                <div>
-                    <input className = 'w-4 h-4' type="checkbox" onChange={(e) => setCheck1(e.target.value)} value={item.symptom1} /> {item.symptom1}
+            <div className='flex flex-col justify-center items-start w-1/2 h-1/3 ' key={index}>
+                <div >
+                    <input className = 'w-4 h-4 mt-2' type="checkbox" onChange={(e) => setCheck1(e.target.value)} value={item.symptom1} /> {item.symptom1}
                     <br />
-                    <input className = 'w-4 h-4' type="checkbox" onChange={(e) => setCheck2(e.target.value)} value={item.symptom2} /> {item.symptom2}
+                    <input className = 'w-4 h-4 mt-2' type="checkbox" onChange={(e) => setCheck2(e.target.value)} value={item.symptom2} /> {item.symptom2}
                     <br />
-                    <input className = 'w-4 h-4'type="checkbox" onChange={(e) => setCheck3(e.target.value)} value={item.symptom3} /> {item.symptom3}
+                    <input className = 'w-4 h-4 mt-2'type="checkbox" onChange={(e) => setCheck3(e.target.value)} value={item.symptom3} /> {item.symptom3}
                     <br />
-                    <input className = 'w-4 h-4' type="checkbox" onChange={(e) => setCheck4(e.target.value)} value={item.symptom4} /> {item.symptom4}
+                    <input className = 'w-4 h-4 mt-2' type="checkbox" onChange={(e) => setCheck4(e.target.value)} value={item.symptom4} /> {item.symptom4}
                 </div>
             </div>
         )

@@ -18,11 +18,13 @@ const SignIn = ({ token }) => {
             console.log('result: ', result)
             console.log('result.data:  ', result.data)
             console.log('token:  ', token)
-            setStatus(result.status + ': ' + result.data.user.username)
+            console.log('Message: ', result.data.message);
+            // setStatus(result.status + ': ' + result.data.user.username)
+            setStatus('Sign-in success')
         }
         catch (e) {
             console.log('error: ', JSON.stringify(e.response))
-            setStatus(JSON.stringify(e.response).substring(0, 80) + "...")
+            setStatus(JSON.stringify(e.response).substring(20, 46))
         }
     }
 
@@ -32,7 +34,7 @@ const SignIn = ({ token }) => {
                 Username:
             </div>
             <div>
-                <input className='w-full h-8 rounded-md border-2 border-green-800 ring-2 ring-green-500 mt-2 pl-2 focus:outline-none' 
+                <input className='w-full h-8 rounded-md border-2 border-green-800 ring-2 ring-green-500 mt-2 pl-2 focus:outline-none'
                     type="text"
                     name="username"
                     placeholder="username"
@@ -43,7 +45,7 @@ const SignIn = ({ token }) => {
                 Password:
             </div>
             <div>
-                <input className='w-full h-8 rounded-md border-2 border-green-800 ring-2 ring-green-500 mt-2 pl-2 focus:outline-none' 
+                <input className='w-full h-8 rounded-md border-2 border-green-800 ring-2 ring-green-500 mt-2 pl-2 focus:outline-none'
                     type="password"
                     name="password"
                     placeholder="password"
@@ -54,6 +56,7 @@ const SignIn = ({ token }) => {
     )
 
     const copyText = () => {
+        console.log("test: ",token);
         navigator.clipboard.writeText(token)
     }
 
@@ -92,7 +95,7 @@ const SignIn = ({ token }) => {
 
                 <div>
                     <button className='h-10 w-28 border-4 border-green-900 rounded-lg bg-green-500 hover:bg-green-300 
-                        font-bold uppercase focus:outline-none' 
+                        font-bold uppercase focus:outline-none'
                         onClick={login}>Sign in</button>
                 </div>
             </div>

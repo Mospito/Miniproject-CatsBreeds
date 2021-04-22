@@ -14,6 +14,10 @@ const Nav = () => {
                             <a className="inline-block no-underline hover:text-black font-bold text-lg py-2 px-4 lg:-ml-2  "  >Home</a>
                         </Link>
 
+                        <Link href="/searchCat">
+                            <a className="inline-block no-underline hover:text-black font-bold text-lg py-2 px-4 lg:-ml-2" >SearchCat</a>
+                        </Link>
+
                         <Link href="/symptom">
                             <a className="inline-block no-underline hover:text-black font-bold text-lg py-2 px-4 lg:-ml-2" >Cat-Symptom</a>
                         </Link>
@@ -22,9 +26,7 @@ const Nav = () => {
                             <a className="inline-block no-underline hover:text-black font-bold text-lg py-2 px-4 lg:-ml-2" >Add-Symptom</a>
                         </Link>
 
-                        <Link href="#">
-                            <a className="inline-block no-underline hover:text-black font-bold text-lg py-2 px-4 lg:-ml-2" >About</a>
-                        </Link>
+
 
                     </ul>
 
