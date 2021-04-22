@@ -24,15 +24,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
+    "/logout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/logout.js"
+    ],
     "/searchCat": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/searchCat.js"
-    ],
-    "/symptom": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/symptom.js"
     ]
   },
   "ampFirstPages": []

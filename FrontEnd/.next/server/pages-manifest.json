@@ -2,6 +2,6 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/searchCat": "pages/searchCat.js",
-  "/symptom": "pages/symptom.js"
+  "/logout": "pages/logout.js",
+  "/searchCat": "pages/searchCat.js"
 }

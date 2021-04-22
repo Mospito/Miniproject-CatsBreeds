@@ -73,23 +73,15 @@ const symptom = () => {
 
         console.log("Test dis: ", dis1, dis2, dis3, dis4);
 
-        // healths.disease.map((item) => {
-        //     if (item.symptom1 === dis1 && item.symptom2 === dis2 && item.symptom3 === dis3 && item.symptom4 === dis4) {
-        //         console.log(item.name);
-        //         setName(item.name)
-
-        //     }
-        //     else {
-
-        //         // setName("ไม่เจอโรคในระบบ")
-        //         console.log(item.name);
-        //     }
-        // })
-
         for (let i = 0; i < healths.disease.length; i++) {
             console.log(healths.disease.length);
             console.log(healths.disease[i]);
-            if (healths.disease[i].symptom1 === dis1 && healths.disease[i].symptom2 === dis2 && healths.disease[i].symptom3 === dis3 && healths.disease[i].symptom4 === dis4) {
+            if (healths.disease[i].symptom1 === dis1 &&
+                healths.disease[i].symptom2 === dis2 &&
+                healths.disease[i].symptom3 === dis3 &&
+                healths.disease[i].symptom4 === dis4
+            ) {
+
                 console.log(healths.disease[i].name);
                 setName(healths.disease[i].name)
                 break
@@ -99,11 +91,6 @@ const symptom = () => {
             }
 
         }
-
-
-
-
-
 
     }
 
